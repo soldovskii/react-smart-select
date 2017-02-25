@@ -1,5 +1,5 @@
 # React Smart Select
-#### React select component
+## React select component
 
 #### Remark:
 This is boilerplate with hot module replacement and redux.
