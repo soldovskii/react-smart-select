@@ -1,5 +1,5 @@
 # React Smart Select
-#### React select element
+#### React select component
 
 Features:
 - On mobile devices work as native select
