@@ -7,7 +7,7 @@ This is boilerplate with hot module replacement and redux.
 Component located at:
 [react-smart-select/frontend/components/SmartSelect/](https://github.com/soldovskij/react-smart-select/tree/master/frontend/components/SmartSelect)
 
-As you can see in the code of source component, it has dependencies:
+As you can see in the component source code, it has dependencies:
 [react-smart-select/frontend/utils/](https://github.com/soldovskij/react-smart-select/tree/master/frontend/utils)
 
 
