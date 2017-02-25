@@ -15,6 +15,7 @@ As you can see in the component source code, it has dependencies:
 - On mobile devices work as native select
 - On desktop select is drop down as default, if not enough space - drop up
 - Search with hihglight
+- Auto correct keyboard layout from EN to RU
  
 #### Component has several properties:
 - list - dataSource for SmartSelect 
