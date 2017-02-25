@@ -1,6 +1,11 @@
 # React Smart Select
 #### React select component
 
+Remark:
+This is boilerplate with hot module replacement and redux.
+Component located at [react-smart-select/frontend/components/SmartSelect/](https://github.com/soldovskij/react-smart-select/tree/master/frontend/components/SmartSelect)
+
+
 Features:
 - On mobile devices work as native select
 - On desktop select is drop down as default, if not enough space - drop up
