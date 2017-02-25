@@ -1,4 +1,4 @@
-# React SmartSelector
+# React SmartSelect
 #### React select element
 
 Features:
@@ -29,5 +29,4 @@ Component has several properties:
 - npm start
 - open in browser on 3000 port
 
-![React SmartSelector](https://image.ibb.co/dvMB3v/dropdown.png)
-![React SmartSelector](https://image.ibb.co/dQN7bF/dropup.png)
+![React Smart Select](https://image.ibb.co/jEfFVa/react_smart_select.png)
