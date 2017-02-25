@@ -1,8 +1,8 @@
-import './SmartSelector.styl';
+import './SmartSelect.styl';
 
 import classNames                              from 'classnames';
 import React, { Component, PropTypes }         from 'react';
-import { detectMob, layoutReplacer, domUtils } from '../utils';
+import { detectMob, layoutReplacer, domUtils } from '../../utils';
 
 export default class SmartSelector extends Component {
 	static propTypes = {

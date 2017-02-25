@@ -4,7 +4,7 @@ import { bindActionCreators }   from 'redux';
 import { connect }              from 'react-redux';
 
 import * as CountryListActions  from '../actions/CountryListActions';
-import SmartSelector            from '../components/SmartSelector';
+import SmartSelector            from '../components/SmartSelect/SmartSelect';
 
 @connect(state => state)
 export default class CountryListApp extends Component {
