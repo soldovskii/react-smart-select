@@ -1,4 +1,4 @@
-# React SmartSelect
+# React Smart Select
 #### React select element
 
 Features:
