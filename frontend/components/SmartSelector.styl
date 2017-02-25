@@ -1,0 +1,148 @@
+border-color = #a9a9a9
+arrow-color = #4c4c4c
+highlight-color = #de7900
+hover-color = #fff5dd
+
+font-normalize()
+  font-size 16px
+  line-height 1
+  font-family Arial
+
+smart-select()
+  smart-select-element()
+  border-radius 3px
+  border 1px solid border-color
+  box-shadow 0 0 5px rgba(0,0,0,.1);
+  cursor pointer
+  height 40px
+  outline 0
+smart-select-after()
+  display: block;
+  position: absolute;
+  content: '';
+  top: 16px;
+  right: 16px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 7px solid arrow-color ;
+  transition: transform .2s ease;
+
+smart-select-element()
+  width 100%
+  padding 10px 36px 10px 8px
+  box-sizing border-box
+
+
+input, select, textarea
+  font-normalize()
+
+.smart-selector
+  font-normalize();
+  position relative
+
+  &--focus
+    .smart-selector_custom .result-container
+      height 252px
+      max-height 252px
+      opacity 1
+
+
+  &--up
+    .smart-selector_custom .search-container input
+      border-top-right-radius 0
+      border-top-left-radius 0
+    .smart-selector_custom .search-container input + label
+      display none
+    .smart-selector_custom .search-container:after
+      transform rotate(180deg)
+    .smart-selector_custom .result-container
+      top -292px
+      border-width 1px
+      border-bottom: 0
+      border-top-left-radius 3px
+      border-top-right-radius 3px
+
+
+
+  &--down
+    .smart-selector_custom .search-container input
+      border-bottom-right-radius 0
+      border-bottom-left-radius 0
+    .smart-selector_custom .search-container input + label
+      top: -8px
+    .smart-selector_custom .result-container
+      height auto
+      border-width 1px
+      border-top: 0
+      border-bottom-left-radius 3px
+      border-bottom-right-radius 3px
+
+
+
+  &--mobile
+    .smart-selector_custom
+      z-index -1
+    .smart-selector_native
+      z-index auto
+
+  &_custom
+    position absolute
+    top: 0
+    width 100%
+
+    & .search-container
+      position relative
+      cursor pointer
+
+      input
+        smart-select()
+        transition border-radius ease 0.1s
+
+      input + label
+        position absolute
+        top 12px
+        left 4px
+        cursor pointer
+        padding 0 5px
+        transition top ease 0.2s
+        white-space nowrap
+        overflow hidden
+        max-width calc(100% - 52px)
+        background-color white
+
+      &:after
+        smart-select-after()
+
+    & .result-container
+      position relative
+      cursor pointer
+      height 0
+      opacity 0
+      overflow auto
+      border-style solid
+      border-color border-color
+      box-sizing border-box
+      background-color white
+      z-index 2
+
+      &_item
+        smart-select-element()
+
+        &:hover
+          background-color hover-color
+
+        & .highlight
+          color highlight-color
+          text-decoration underline
+
+
+
+  &_native
+    width 100%
+    z-index -1
+
+    select
+      smart-select()
+      appearance none
+    &:after
+      smart-select-after()
