@@ -24,7 +24,7 @@ Component has several properties:
     />
     
 #### For launch example
-- clone this repository
+- git clone https://github.com/soldovskij/react-smart-select.git
 - npm install
 - npm start
 - open in browser on 3000 port
