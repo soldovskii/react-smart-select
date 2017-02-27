@@ -172,8 +172,10 @@ export default class SmartSelector extends Component {
 	//region Renders
 
 	renderCustomSelect() {
-		let { list, rules: { key, value }, selectedKey, searchValue } = this.state;
-		let { placeholder }                                           = this.props;
+		let { list, rules: { key, value }, selectedKey, searchValue, isMobile } = this.state;
+		let { placeholder }                                                     = this.props;
+
+		if (isMobile) return;
 
 		if (selectedKey !== 'default') {
 			let item = list.find(i => i[key] === selectedKey);
