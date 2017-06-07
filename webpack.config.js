@@ -33,6 +33,24 @@ let webpackConfig = {
 						'stylus-loader'
 					]
 				})
+			},
+			{
+				test: /\.scss$/,
+				loader: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								sourceMap: DEBUG,
+								minimize: !DEBUG
+							}
+						},
+						'postcss-loader',
+						'resolve-url-loader',
+						'sass-loader'
+					]
+				})
 			}
 		]
 	},
@@ -42,7 +60,7 @@ let webpackConfig = {
 };
 
 if (DEBUG) {
-	webpackConfig.entry = [
+	webpackConfig.entry   = [
 		'webpack-hot-middleware/client',
 		path.join(__dirname, 'frontend', 'index')
 	];

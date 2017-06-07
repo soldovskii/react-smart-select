@@ -1,9 +1,9 @@
 import React, { Component }     from 'react';
-import { createStore }  				from 'redux';
+import { createStore }          from 'redux';
 import { Provider }             from 'react-redux';
 
 import CountryListReducer       from '../reducers/CountryListReducer';
-import CountryListApp            from './CountryListApp';
+import CountryListApp           from './CountryListApp';
 
 const store = createStore(
 	CountryListReducer,
